@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   For this _TODO_, write function called count() that takes one parameter:
 #       number  <-- int
@@ -24,9 +24,15 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def count(number):
+    i = 1
+    while i < number + 1:
+        print(i)
+        i += 1
 
+count(6)
 ###############################################################################
-# TODO: 2. (5 pts)
+# DONE: 2. (5 pts)
 #
 #   For this _TODO_, write a function called adder() that will continually ask the use to enter a number (using user input) like so:
 #
@@ -48,7 +54,17 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def adder():
+    total = 0
+    while True:
+        num = int(input("Please Enter a Number: "))
+        if num == 0:
+            break
+        total += num
+    print("The sum is", total)
 
+adder()
+#used chatGPT. figured out everything besides how to have it constatnly loop back to the input. realized I didnt put the input into the while loop.
 ###############################################################################
 # TODO: 3. EXTRA CREDIT (3 pts)
 #
@@ -64,3 +80,18 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def adder():
+    total = 0
+    while True:
+        try:
+            num = int(input("Please Enter a Number: "))
+            total += num
+        except ValueError:
+            print("Invalid Input! Please enter a valid number.")
+            continue
+        if num == 0:
+            break
+    print("The sum is", total)
+
+adder()
+#Used caht GPT to help figure out how to get the invalid input on there. However, it did explain everything and honestly it's a lot simpler than I was expecting.

@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   For this _TODO_, write a block of code that uses a nested for loop to print
 #   the following output:
@@ -19,9 +19,13 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+for outer in range(1, 3):
+    print("Outer:", outer)
+    for inner in range(1, 4):
+        print("Inner:", inner)
+#I'm not gonna lie I was stumped by this questio for a while. Chat GPT ran the code for me and I still didn't understand at first. but after a lot of explaining it makes sense how nested loops work now.
 ###############################################################################
-# TODO: 2. (4 pts)
+# DONE: 2. (4 pts)
 #
 #   For this _TODO_, write a function called many_triangles() that takes two
 #   parameters:
@@ -49,3 +53,8 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def triangle(num_of_triangles, size):
+    for num_of_triangles in range(1, num_of_triangles + 1):
+        for x in range(1, size + 1):
+            print('*' * x)
+triangle(4,10)
